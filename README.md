@@ -1,4 +1,3 @@
-# cse237-project
 # Debug: Trivia for Insect Lovers
 
 Mia Collymore Abbas, Nina Redpath, and Sarah Willis
