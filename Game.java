@@ -11,6 +11,6 @@ public class Game{
     public static void main(String[] args) {
         ArgsProcessor ap = new ArgsProcessor(args);
         String username = ap.nextString("What would you like your username to be?");
-        currentUser = new Player(username, 0);
+        Player currentUser = new Player(username, 0);
     }
 }
