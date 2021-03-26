@@ -14,7 +14,7 @@ public class Play {
 		System.out.println("Welcome to Debug: Trivia for Bug Lovers : ) ");
 		System.out.println();
 		System.out.println();
-		System.out.println("Please intput your username:");
+		System.out.println("Please input your username:");
 		Scanner ap = new Scanner(System.in);
 		String input = ap.next();
 		System.out.println();
