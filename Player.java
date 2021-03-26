@@ -1,6 +1,7 @@
-package Player;
+//package Player;
 
 public class Player{
+	
     String username;
     int points;
 
