@@ -33,7 +33,7 @@ public class Play {
 			if(answer.equals(levelOne.getAnswer(i))) {
 				singlePlayer.addPoints(levelOne.getLevelScore());
 			}
-			System.out.println(singlePlayer.username + "'s score is " + singlePlayer.points);
+			System.out.println(singlePlayer.username + "'s score is: " + singlePlayer.points);
 		}
 		
 		ap.close();
