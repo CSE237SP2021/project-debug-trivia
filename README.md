@@ -22,12 +22,12 @@ Usage:
 ** Note that the responses to the trivia questions should be one capital letter, ex: "A"
 
 
-For the next iteration we will do the following: 
-	add the rest of the levels 
-	input real trivia 
-	make the instructions more user - friendly. 
-	make the level increment when the current level is finished 
-	add unit testing 
+For the next iteration we will do the following: <br />
+	add the rest of the levels <br />
+	input real trivia <br />
+	make the instructions more user - friendly. <br />
+	make the level increment when the current level is finished <br />
+	add unit testing <br />
 		
 
 	
