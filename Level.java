@@ -1,7 +1,7 @@
 
 // this is the level interface, each level implements it within their class
 public interface Level {
-	public String getCorrectAnswer();
+	public String getAnswer(int index);
 	public int getLevelScore();
-	public String getQuestionOne();
+	public String getQuestion(int index);
 }

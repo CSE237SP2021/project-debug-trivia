@@ -6,24 +6,32 @@ public class Level1 implements Level {
 	
 	String correctAnswer;
 	int levelScore;
-	String questionOne;
+	String [] levelOneQuestions;
+	String [] levelOneAnswers;
 	
-	public Level1(String questionOne, String correctAnswer) {
-		this.questionOne = questionOne;
-		this.correctAnswer = correctAnswer;
+	
+	public String getAnswer(int index) {
+		return levelOneAnswers[index];
 	}
 	
-	public String getCorrectAnswer() {
-		return correctAnswer;
+	public String getQuestion(int index) {
+		return levelOneQuestions[index];
 	}
 	
 	public int getLevelScore() {
 		return levelScore;
 	}
 	
-	public String getQuestionOne() {
-		return questionOne;
+	{
+		for(int i = 0; i < 3; i++) {
+			String s = Integer.toString(i);
+			this.levelOneQuestions[i] = "Please enter" + s;
+			this.levelOneAnswers[i] = s;
+		}
+		this.levelScore = 10;
 	}
 }
+
+
 
 

@@ -16,7 +16,7 @@ public class Play {
 		System.out.println();
 		System.out.println("Please input your username:");
 		Scanner ap = new Scanner(System.in);
-		String input = ap.next();
+		String input = ap.nextLine();
 		System.out.println();
 		System.out.println();		
 		
@@ -24,15 +24,20 @@ public class Play {
 		Player singlePlayer = new Player(input, 0);
 		System.out.println("Hello, " + singlePlayer.username);
 		
-		//question syntax tes;t
-		Level1 levelOne = new Level1("Please enter the number 10 to represent the million species of bugs", "10");
-		System.out.println(levelOne.getQuestionOne());
-		Scanner ap1 = new Scanner(System.in);
-		String answer = ap1.next();
-		if(answer == levelOne.getCorrectAnswer()) {
-			singlePlayer.addPoints(5);
+		//question syntax test
+		Level1 levelOne = new Level1();
+
+		for(int i = 0; i < 3; i++) {
+			System.out.println(levelOne.getQuestion(i));
+			String answer = ap.nextLine();
+			if(answer.equals(levelOne.getAnswer(i))) {
+				singlePlayer.addPoints(levelOne.getLevelScore());
+			}
+			System.out.println(singlePlayer.username + " " + singlePlayer.points);
 		}
-		System.out.println(singlePlayer.username + " " + singlePlayer.points);
+		
+		ap.close();
+
 	}
 
 
