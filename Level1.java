@@ -4,15 +4,16 @@
 // Level1.correctAnswer == userInput in main game play.
 public class Level1 implements Level {
 	
-	int correctAnswer;
+	String correctAnswer;
 	int levelScore;
 	String questionOne;
 	
-	public Level1(String questionOne) {
+	public Level1(String questionOne, String correctAnswer) {
 		this.questionOne = questionOne;
+		this.correctAnswer = correctAnswer;
 	}
 	
-	public int getCorrectAnswer() {
+	public String getCorrectAnswer() {
 		return correctAnswer;
 	}
 	
@@ -24,3 +25,5 @@ public class Level1 implements Level {
 		return questionOne;
 	}
 }
+
+

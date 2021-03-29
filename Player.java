@@ -17,4 +17,8 @@ public class Player{
     public int getPoints(){
         return points;
     }
+    
+    public void addPoints(int levelPoints) {
+    	this.points = levelPoints + points;
+    }
 }

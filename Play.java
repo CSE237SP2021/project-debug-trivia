@@ -24,6 +24,15 @@ public class Play {
 		Player singlePlayer = new Player(input, 0);
 		System.out.println("Hello, " + singlePlayer.username);
 		
+		//question syntax tes;t
+		Level1 levelOne = new Level1("Please enter the number 10 to represent the million species of bugs", "10");
+		System.out.println(levelOne.getQuestionOne());
+		Scanner ap1 = new Scanner(System.in);
+		String answer = ap.next();
+		if(answer == levelOne.getCorrectAnswer()) {
+			singlePlayer.addPoints(5);
+		}
+		System.out.println(singlePlayer.username + " " + singlePlayer.points);
 	}
 
 
