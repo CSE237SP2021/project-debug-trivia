@@ -27,11 +27,15 @@ public class Play {
 		//question syntax test
 		Level1 levelOne = new Level1();
 
-		for(int i = 0; i < 3; i++) {
+		for(int i = 0; i < levelOne.levelOneQuestions.length; i++) {
 			System.out.println(levelOne.getQuestion(i));
 			String answer = ap.nextLine();
 			if(answer.equals(levelOne.getAnswer(i))) {
 				singlePlayer.addPoints(levelOne.getLevelScore());
+				System.out.println("correct!");
+			}
+			else {
+				System.out.println("Incorrect :(, the answer was " + levelOne.getAnswer(i));
 			}
 			System.out.println(singlePlayer.username + "'s score is: " + singlePlayer.points);
 		}
