@@ -6,9 +6,13 @@ This project is a multiple-choice trivia game centered around bugs that increase
 
 For this iteration we did the following: 
 	set up our repo and kanban board 
+	
 	mapped out the general structure of our code (in terms of classes, interfaces etc)
+	
 	created a level one class and player class that hold information 
+	
 	created the basic play loop so that one level can be played ** note that the trivia is placeholder questions, not real trivia yet. 
+	
 	created a score system that updates when a question is correct. 
 	
 Usage: 
