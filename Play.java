@@ -28,7 +28,7 @@ public class Play {
 		Level1 levelOne = new Level1("Please enter the number 10 to represent the million species of bugs", "10");
 		System.out.println(levelOne.getQuestionOne());
 		Scanner ap1 = new Scanner(System.in);
-		String answer = ap.next();
+		String answer = ap1.next();
 		if(answer == levelOne.getCorrectAnswer()) {
 			singlePlayer.addPoints(5);
 		}
