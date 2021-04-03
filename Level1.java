@@ -8,11 +8,16 @@ public class Level1 implements Level {
 	Question[] levelOneQuestions = new Question[3];	
 
 	
-	questionOne = new Question("Which Bug is a dragonfly?", "Dragonfly", "Wasp", "Dung Beetle", "Mosquito");
-	questionTwo = new Question("Which Bug is a mosquito?", "Mosquito", "Dragonfly", "Wasp", "Dung Beetle");
-	questionThree = new Question("Which Bug is a wasp?", "Wasp", "Dragonfly", "Dung Beetle", "Mosquito");
-	//create a randomizer function to print out the choices and answer randomly
+	//why aren't the questions lighting up properly?
 	
+	Question qOne = new Question( "Which Bug is a dragonfly?", "Dragonfly", "Wasp", "Dung Beetle", "Mosquito" );
+	Question qTwo = new Question( "Which Bug is a mosquito?", "Mosquito", "Dragonfly", "Wasp", "Dung Beetle" );
+	Question qThree = new Question( "Which Bug is a wasp?", "Wasp", "Dragonfly", "Dung Beetle", "Mosquito" );
+	//create a randomizer function to print out the choices and answer randomly
+	levelOneQuestions[0] = qOne;
+	levelOneQuestions[1] = qTwo;
+	levelOneQuestions[2] = qThree;
+ 	
 	String question1 = "Which Bug is a dragon fly? \n A. Mosquito   B. Dragon Fly  C. Wasp  D. Dung Beetle";
 	String answer1 = "B";
 	
