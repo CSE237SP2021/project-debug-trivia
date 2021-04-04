@@ -12,15 +12,18 @@ public class Play {
 	public static void main(String[] args) {		
 		
 		//Creating a player class: 
-		Player singlePlayer = new Player(" ", 0);
-		singlePlayer.createPlayer();
-		//declaration of all the games
+		Player temp = new Player(" ", 0);
+		Player singlePlayer = temp.createPlayer();
+		
+		//declaration of levels
 		Level1 levelOne = new Level1();
 		Level2 levelTwo = new Level2();
 		Level3 levelThree = new Level3();
-		//playing of all the games
+		
+		//playing of games
 		levelOne.playLevel(singlePlayer);
 		levelTwo.playLevel(singlePlayer);
 		levelThree.playLevel(singlePlayer);
+
 	}
 }
