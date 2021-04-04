@@ -1,13 +1,9 @@
-
-// this is the Level1 class, it implements "level" and creates an object for Level1 which takes in
-// the questions and correct answers for the level along with the level score (increased if
-// Level1.correctAnswer == userInput in main game play.
 import java.util.Scanner;
 
-public class Level1 implements Level {
+public class Level3 implements Level{
 	
 	int levelScore;
-	Question[] levelOneQuestions = new Question[3];	
+	Question[] levelThreeQuestions = new Question[3];	
 
 	
 	//why aren't the questions lighting up properly?
@@ -19,7 +15,7 @@ public class Level1 implements Level {
 	
 	
 	public Question[] getQuestions() {
-		return levelOneQuestions;
+		return levelThreeQuestions;
 	}
 	
 	public int getLevelScore() {
@@ -47,8 +43,8 @@ public class Level1 implements Level {
 	
 	public void playLevel(Player p){
 		Scanner ap = new Scanner(System.in);
-		for(int i = 0; i < levelOneQuestions.length; i++) {
-			Question currentQ = levelOneQuestions[i];
+		for(int i = 0; i < levelThreeQuestions.length; i++) {
+			Question currentQ = levelThreeQuestions[i];
 			System.out.println(currentQ.prompt);
 			System.out.println(randomize(currentQ));
 			String answer = ap.nextLine();
@@ -68,14 +64,10 @@ public class Level1 implements Level {
 	
 	{
 		//figure out how to put this into the Level interface
-		levelOneQuestions[0] = qOne;
-		levelOneQuestions[1] = qTwo;
-		levelOneQuestions[2] = qThree;
+		levelThreeQuestions[0] = qOne;
+		levelThreeQuestions[1] = qTwo;
+		levelThreeQuestions[2] = qThree;
 
-		this.levelScore = 10;
+		this.levelScore = 20;
 	}
 }
-
-
-
-

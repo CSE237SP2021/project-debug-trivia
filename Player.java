@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //package Player;
 
 public class Player{
@@ -20,5 +22,20 @@ public class Player{
     
     public void addPoints(int levelPoints) {
     	this.points = levelPoints + this.points;
+    }
+    
+    public Player createPlayer(){
+    	System.out.println("Welcome to Debug: Trivia for Bug Lovers : ) ");
+		System.out.println("Print out the correct answer for each question");
+		System.out.println();
+		System.out.println("Please input your username:");
+		Scanner ap = new Scanner(System.in);
+		String input = ap.nextLine();
+		System.out.println();
+		System.out.println();
+		System.out.println("Hello, " + input);
+		System.out.println();
+		Player singlePlayer = new Player(input, 0);
+		return singlePlayer;
     }
 }
