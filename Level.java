@@ -1,7 +1,10 @@
 
 // this is the level interface, each level implements it within their class
+import java.util.Scanner;
+
 public interface Level {
-	public String getAnswer(int index);
+	public Question[] getQuestions();
 	public int getLevelScore();
-	public String getQuestion(int index);
+	public String randomize(Question q);
+	public void playLevel(Player p);
 }

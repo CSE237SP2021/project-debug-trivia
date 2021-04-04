@@ -2,6 +2,8 @@
 // this is the Level1 class, it implements "level" and creates an object for Level1 which takes in
 // the questions and correct answers for the level along with the level score (increased if
 // Level1.correctAnswer == userInput in main game play.
+import java.util.Scanner;
+
 public class Level1 implements Level {
 	
 	int levelScore;
@@ -14,40 +16,62 @@ public class Level1 implements Level {
 	Question qTwo = new Question( "Which Bug is a mosquito?", "Mosquito", "Dragonfly", "Wasp", "Dung Beetle" );
 	Question qThree = new Question( "Which Bug is a wasp?", "Wasp", "Dragonfly", "Dung Beetle", "Mosquito" );
 	//create a randomizer function to print out the choices and answer randomly
-	levelOneQuestions[0] = qOne;
-	levelOneQuestions[1] = qTwo;
-	levelOneQuestions[2] = qThree;
- 	
-	String question1 = "Which Bug is a dragon fly? \n A. Mosquito   B. Dragon Fly  C. Wasp  D. Dung Beetle";
-	String answer1 = "B";
 	
-	String question2 = "Which Bug is a mosquito? \n A. Mosquito   B. Dragon Fly  C. Wasp  D. Dung Beetle";
-	String answer2 = "B";
-
-	String question3 = "Which Bug is wasp? \n A. Mosquito   B. Dragon Fly  C. Wasp  D. Dung Beetle";
-	String answer3 = "C";
-		
 	
-	public String getAnswer(int index) {
-		return levelOneAnswers[index];
-	}
-	
-	public String getQuestion(int index) {
-		return levelOneQuestions[index];
+	public Question[] getQuestions() {
+		return levelOneQuestions;
 	}
 	
 	public int getLevelScore() {
 		return levelScore;
 	}
 	
+	public String randomize(Question q){
+		//there has got to be a smarter way to do this lol
+		double randomNumber = Math.floor(Math.random() * 4) + 1;
+		String result = "";
+		if(randomNumber == 1) {
+			result = "A." + q.answer + " B." + q.choiceThree + " C." + q.choiceTwo + " D." + q.choiceOne;
+		}
+		else if(randomNumber == 2) {
+			result = "A." + q.choiceThree + " B." + q.answer + " C." + q.choiceTwo + " D." + q.choiceOne;
+		}
+		else if(randomNumber == 3) {
+			result = "A." + q.choiceTwo + " B." + q.choiceThree + " C." + q.answer + " D." + q.choiceOne;
+		}
+		else if(randomNumber == 4) {
+			result = "A." + q.choiceOne + " B." + q.choiceThree + " C." + q.choiceTwo + " D." + q.answer;
+		}
+		return result;
+	}
+	
+	public void playLevel(Player p){
+		Scanner ap = new Scanner(System.in);
+		for(int i = 0; i < levelOneQuestions.length; i++) {
+			Question currentQ = levelOneQuestions[i];
+			System.out.println(currentQ.prompt);
+			System.out.println(randomize(currentQ));
+			String answer = ap.nextLine();
+			if(currentQ.checkAnswer(answer)) {
+				p.addPoints(levelScore);
+				System.out.println("correct!");
+			}
+			else {
+				System.out.println("Incorrect :(, the answer was " + currentQ.answer);
+
+			}
+			System.out.println(p.username + "'s score is: " + p.points);
+
+		}
+		ap.close();
+	}
+	
 	{
-		this.levelOneQuestions[0] = question1;
-		this.levelOneAnswers[0] = answer1;
-		this.levelOneQuestions[1] = question2;
-		this.levelOneAnswers[1] = answer2;
-		this.levelOneQuestions[2] = question3;
-		this.levelOneAnswers[2] = answer3;
-		
+		//figure out how to put this into the Level interface
+
+		levelOneQuestions[0] = qOne;
+		levelOneQuestions[1] = qTwo;
+		levelOneQuestions[2] = qThree;
 
 		this.levelScore = 10;
 	}
