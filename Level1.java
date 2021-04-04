@@ -46,12 +46,16 @@ public class Level1 implements Level {
 	}
 	
 	public void playLevel(Player p){
-		Scanner ap = new Scanner(System.in);
+		//don't close the Scanner because the game ends
+		Scanner apOne = new Scanner(System.in);
 		for(int i = 0; i < levelOneQuestions.length; i++) {
 			Question currentQ = levelOneQuestions[i];
+			System.out.println();
 			System.out.println(currentQ.prompt);
+			System.out.println();
 			System.out.println(randomize(currentQ));
-			String answer = ap.nextLine();
+			String answer = apOne.nextLine();
+			System.out.println();
 			if(currentQ.checkAnswer(answer)) {
 				p.addPoints(levelScore);
 				System.out.println("correct!");
@@ -63,7 +67,6 @@ public class Level1 implements Level {
 			System.out.println(p.username + "'s score is: " + p.points);
 
 		}
-		ap.close();
 	}
 	
 	{
