@@ -10,8 +10,9 @@ public class Play {
 	// this will take user answers and compare them to the correct answer for that level. 
 
 	public static void main(String[] args) {		
-		
+		//create the scanner for all the levels
 		Scanner ap = new Scanner(System.in);
+		
 		//Creating a player class: 
 		Player temp = new Player(" ", 0);
 		Player singlePlayer = temp.createPlayer(ap);
