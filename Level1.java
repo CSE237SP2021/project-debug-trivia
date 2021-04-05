@@ -45,16 +45,17 @@ public class Level1 implements Level {
 		return result;
 	}
 	
-	public void playLevel(Player p){
+	public void playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
-		Scanner apOne = new Scanner(System.in);
+		System.out.println("Welcome to Level 1");
+		System.out.println();
 		for(int i = 0; i < levelOneQuestions.length; i++) {
 			Question currentQ = levelOneQuestions[i];
 			System.out.println();
 			System.out.println(currentQ.prompt);
 			System.out.println();
 			System.out.println(randomize(currentQ));
-			String answer = apOne.nextLine();
+			String answer = ap.nextLine();
 			System.out.println();
 			if(currentQ.checkAnswer(answer)) {
 				p.addPoints(levelScore);

@@ -11,9 +11,10 @@ public class Play {
 
 	public static void main(String[] args) {		
 		
+		Scanner ap = new Scanner(System.in);
 		//Creating a player class: 
 		Player temp = new Player(" ", 0);
-		Player singlePlayer = temp.createPlayer();
+		Player singlePlayer = temp.createPlayer(ap);
 		
 		//declaration of levels
 		Level1 levelOne = new Level1();
@@ -21,9 +22,9 @@ public class Play {
 		Level3 levelThree = new Level3();
 		
 		//playing of games
-		levelOne.playLevel(singlePlayer);
-		levelTwo.playLevel(singlePlayer);
-		levelThree.playLevel(singlePlayer);
+		levelOne.playLevel(singlePlayer, ap);
+		levelTwo.playLevel(singlePlayer, ap);
+		levelThree.playLevel(singlePlayer, ap);
 
 	}
 }

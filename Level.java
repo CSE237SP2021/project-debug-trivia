@@ -6,5 +6,5 @@ public interface Level {
 	public Question[] getQuestions();
 	public int getLevelScore();
 	public String randomize(Question q);
-	public void playLevel(Player p);
+	public void playLevel(Player p, Scanner ap);
 }
