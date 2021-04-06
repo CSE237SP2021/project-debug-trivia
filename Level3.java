@@ -27,23 +27,23 @@ public class Level3 implements Level{
 		double randomNumber = Math.floor(Math.random() * 4) + 1;
 		String result = "";
 		if(randomNumber == 1) {
-			result = "A." + q.answer + " B." + q.choiceTwo + " C." + q.choiceThree + " D." + q.choiceOne;
+			result = "A:" + q.answer + " B:" + q.choiceTwo + " C:" + q.choiceThree + " D:" + q.choiceOne;
 		}
 		else if(randomNumber == 2) {
-			result = "A." + q.choiceThree + " B." + q.answer + " C." + q.choiceOne + " D." + q.choiceTwo;
+			result = "A:" + q.choiceThree + " B:" + q.answer + " C:" + q.choiceOne + " D:" + q.choiceTwo;
 		}
 		else if(randomNumber == 3) {
-			result = "A." + q.choiceTwo + " B." + q.choiceOne + " C." + q.answer + " D." + q.choiceThree;
+			result = "A:" + q.choiceTwo + " B:" + q.choiceOne + " C:" + q.answer + " D:" + q.choiceThree;
 		}
 		else if(randomNumber == 4) {
-			result = "A." + q.choiceOne + " B." + q.choiceThree + " C." + q.choiceTwo + " D." + q.answer;
+			result = "A:" + q.choiceOne + " B:" + q.choiceThree + " C:" + q.choiceTwo + " D:" + q.answer;
 		}
 		return result;
 	}
 	
-	public void playLevel(Player p, Scanner ap){
+	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
-		System.out.println("Welcome to Level 3");
+		System.out.println("Welcome to Level 3: Dragonflies");
 		System.out.println();
 		for(int i = 0; i < levelThreeQuestions.length; i++) {
 			Question currentQ = levelThreeQuestions[i];
@@ -64,6 +64,7 @@ public class Level3 implements Level{
 			System.out.println(p.username + "'s score is: " + p.points);
 
 		}
+		return true;
 	}
 	
 	{

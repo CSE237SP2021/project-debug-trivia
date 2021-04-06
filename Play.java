@@ -23,9 +23,16 @@ public class Play {
 		Level3 levelThree = new Level3();
 		
 		//playing of games
-		levelOne.playLevel(singlePlayer, ap);
-		levelTwo.playLevel(singlePlayer, ap);
-		levelThree.playLevel(singlePlayer, ap);
+		boolean one = levelOne.playLevel(singlePlayer, ap);
+		boolean two = false;
+		boolean three = false;
+		if(one) {
+			two = levelTwo.playLevel(singlePlayer, ap);
+		}
+		if(two) {
+			three = levelThree.playLevel(singlePlayer, ap);
+
+		}
 
 	}
 }
