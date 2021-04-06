@@ -19,7 +19,7 @@ Usage:
 	run java Play. 
 	have fun!! 
 	
-** Note that the responses to the trivia questions should be one capital letter, ex: "A"
+** Note that the responses to the trivia questions should be the full word
 
 
 For the next iteration we will do the following: <br />
