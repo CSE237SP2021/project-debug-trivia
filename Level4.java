@@ -12,16 +12,16 @@ public class Level4 implements Level {
 		double randomNumber = Math.floor(Math.random() * 4) + 1;
 		String result = "";
 		if(randomNumber == 1) {
-			result = "A:" + q.answer + " B:" + q.choiceTwo + " C:" + q.choiceThree + " D:" + q.choiceOne;
+			result = "A: " + q.answer + " B: " + q.choiceTwo + " C: " + q.choiceThree + " D: " + q.choiceOne;
 		}
 		else if(randomNumber == 2) {
-			result = "A:" + q.choiceThree + " B:" + q.answer + " C:" + q.choiceOne + " D:" + q.choiceTwo;
+			result = "A: " + q.choiceThree + " B: " + q.answer + " C: " + q.choiceOne + " D: " + q.choiceTwo;
 		}
 		else if(randomNumber == 3) {
-			result = "A:" + q.choiceTwo + " B:" + q.choiceOne + " C:" + q.answer + " D:" + q.choiceThree;
+			result = "A: " + q.choiceTwo + " B: " + q.choiceOne + " C: " + q.answer + " D: " + q.choiceThree;
 		}
 		else if(randomNumber == 4) {
-			result = "A:" + q.choiceOne + " B:" + q.choiceThree + " C:" + q.choiceTwo + " D:" + q.answer;
+			result = "A: " + q.choiceOne + " B: " + q.choiceThree + " C: " + q.choiceTwo + " D: " + q.answer;
 		}
 		return result;
 	}
