@@ -3,24 +3,9 @@ import java.util.Scanner;
 public class Level2 implements Level{
 	
 	int levelScore;
-	Question[] levelTwoQuestions = new Question[3];	
-
+	Question[] levelTwoQuestions = new Question[6];	
 	
-	//why aren't the questions lighting up properly?
-	
-	Question qOne = new Question( "Which Bug is a dragonfly?", "Dragonfly", "Wasp", "Dung Beetle", "Mosquito" );
-	Question qTwo = new Question( "Which Bug is a mosquito?", "Mosquito", "Dragonfly", "Wasp", "Dung Beetle" );
-	Question qThree = new Question( "Which Bug is a wasp?", "Wasp", "Dragonfly", "Dung Beetle", "Mosquito" );
 	//create a randomizer function to print out the choices and answer randomly
-	
-	
-	public Question[] getQuestions() {
-		return levelTwoQuestions;
-	}
-	
-	public int getLevelScore() {
-		return levelScore;
-	}
 	
 	public String randomize(Question q){
 		//there has got to be a smarter way to do this lol
@@ -41,11 +26,10 @@ public class Level2 implements Level{
 		return result;
 	}
 	
-	
 	public boolean playLevel(Player p, Scanner ap){
+		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 2: Caterpillars");
 		System.out.println();
-		//don't close the Scanner because the game ends
 		for(int i = 0; i < levelTwoQuestions.length; i++) {
 			Question currentQ = levelTwoQuestions[i];
 			System.out.println();
@@ -69,10 +53,18 @@ public class Level2 implements Level{
 	}
 	
 	{
-		//figure out how to put this into the Level interface
+		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
+		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
+		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
+		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
+		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
+		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
 		levelTwoQuestions[0] = qOne;
 		levelTwoQuestions[1] = qTwo;
 		levelTwoQuestions[2] = qThree;
+		levelTwoQuestions[3] = qFour;
+		levelTwoQuestions[4] = qFive;
+		levelTwoQuestions[5] = qSix;
 
 		this.levelScore = 20;
 	}

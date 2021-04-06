@@ -3,8 +3,6 @@
 import java.util.Scanner;
 
 public interface Level {
-	public Question[] getQuestions();
-	public int getLevelScore();
 	public String randomize(Question q);
 	public boolean playLevel(Player p, Scanner ap);
 }

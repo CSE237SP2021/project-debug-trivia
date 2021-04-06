@@ -1,25 +1,11 @@
 import java.util.Scanner;
 
 public class Level4 implements Level {
+	
 	int levelScore;
-	Question[] levelFourQuestions = new Question[3];	
-
+	Question[] levelFourQuestions = new Question[6];	
 	
-	//why aren't the questions lighting up properly?
-	
-	Question qOne = new Question( "Which Bug is a dragonfly?", "Dragonfly", "Wasp", "Dung Beetle", "Mosquito" );
-	Question qTwo = new Question( "Which Bug is a mosquito?", "Mosquito", "Dragonfly", "Wasp", "Dung Beetle" );
-	Question qThree = new Question( "Which Bug is a wasp?", "Wasp", "Dragonfly", "Dung Beetle", "Mosquito" );
 	//create a randomizer function to print out the choices and answer randomly
-	
-	
-	public Question[] getQuestions() {
-		return levelFourQuestions;
-	}
-	
-	public int getLevelScore() {
-		return levelScore;
-	}
 	
 	public String randomize(Question q){
 		//there has got to be a smarter way to do this lol
@@ -67,10 +53,19 @@ public class Level4 implements Level {
 	}
 	
 	{
-		//figure out how to put this into the Level interface
+		//replace questions with worm ones
+		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
+		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
+		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
+		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
+		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
+		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
 		levelFourQuestions[0] = qOne;
 		levelFourQuestions[1] = qTwo;
 		levelFourQuestions[2] = qThree;
+		levelFourQuestions[3] = qFour;
+		levelFourQuestions[4] = qFive;
+		levelFourQuestions[5] = qSix;
 
 		this.levelScore = 40;
 	}
