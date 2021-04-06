@@ -17,6 +17,7 @@ public class Level1 implements Level {
 	Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
 	Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
 	Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
+	Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
 
 	//create a randomizer function to print out the choices and answer randomly
 	
@@ -82,6 +83,7 @@ public class Level1 implements Level {
 		levelOneQuestions[2] = qThree;
 		levelOneQuestions[3] = qFour;
 		levelOneQuestions[4] = qFive;
+		levelOneQuestions[5] = qSix;
 
 		this.levelScore = 10;
 	}
