@@ -21,11 +21,14 @@ public class Play {
 		Level1 levelOne = new Level1();
 		Level2 levelTwo = new Level2();
 		Level3 levelThree = new Level3();
+		Level4 levelFour = new Level4();
+		Level5 levelFive = new Level5();
 		
 		//playing of games
 		boolean one = levelOne.playLevel(singlePlayer, ap);
 		boolean two = false;
 		boolean three = false;
+		boolean four = false;
 		if(one) {
 			two = levelTwo.playLevel(singlePlayer, ap);
 		}
@@ -33,6 +36,11 @@ public class Play {
 			three = levelThree.playLevel(singlePlayer, ap);
 
 		}
-
+		if(three) {
+			four = levelFour.playLevel(singlePlayer, ap);
+		}
+		if(four) {
+			levelFive.playLevel(singlePlayer, ap);
+		}
 	}
 }
