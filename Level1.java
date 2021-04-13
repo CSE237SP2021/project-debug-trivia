@@ -8,24 +8,28 @@ public class Level1 implements Level {
 	
 	int levelScore;
 	Question[] levelOneQuestions = new Question[6];	
+	String answerLetter;
 	
 	//create a randomizer function to print out the choices and answer randomly
 	
 	public String randomize(Question q){
-		//there has got to be a smarter way to do this lol
 		double randomNumber = Math.floor(Math.random() * 4) + 1;
 		String result = "";
 		if(randomNumber == 1) {
 			result = "A: " + q.answer + " B: " + q.choiceTwo + " C: " + q.choiceThree + " D: " + q.choiceOne;
+			answerLetter = "A";
 		}
 		else if(randomNumber == 2) {
 			result = "A: " + q.choiceThree + " B: " + q.answer + " C: " + q.choiceOne + " D: " + q.choiceTwo;
+			answerLetter = "B";
 		}
 		else if(randomNumber == 3) {
 			result = "A: " + q.choiceTwo + " B: " + q.choiceOne + " C: " + q.answer + " D: " + q.choiceThree;
+			answerLetter = "C";
 		}
 		else if(randomNumber == 4) {
 			result = "A: " + q.choiceOne + " B: " + q.choiceThree + " C: " + q.choiceTwo + " D: " + q.answer;
+			answerLetter = "D";
 		}
 		return result;
 	}
@@ -42,7 +46,7 @@ public class Level1 implements Level {
 			System.out.println(randomize(currentQ));
 			String answer = ap.nextLine();
 			System.out.println();
-			if(currentQ.checkAnswer(answer)) {
+			if(answer.equals(answerLetter)) {
 				p.addPoints(levelScore);
 				System.out.println("correct!");
 			}
@@ -56,13 +60,14 @@ public class Level1 implements Level {
 		return true;
 	}
 	
+	
 	{
 		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
 		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
 		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
 		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
 		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
-		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
+		Question qSix = new Question( "Which of the team members stays steely in the face of these vicious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
 		levelOneQuestions[0] = qOne;
 		levelOneQuestions[1] = qTwo;
 		levelOneQuestions[2] = qThree;
