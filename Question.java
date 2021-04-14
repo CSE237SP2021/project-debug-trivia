@@ -14,6 +14,17 @@ public class Question {
 		this.choiceThree = choiceThree;
 	}
 	
+	public boolean checkValidInput(String input) {
+		if (input.isEmpty() || input.trim().isEmpty()) {
+			return false;
+		}
+		if (input !=choiceOne && input != choiceTwo && input != choiceThree && input != answer) {
+			return false;
+		}
+		
+			return true;	
+	}
+	
 	public String getPrompt() {
 		return prompt;
 	}
