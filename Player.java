@@ -24,6 +24,16 @@ public class Player{
     	this.points = levelPoints + this.points;
     }
     
+    public boolean checkUsername(String username) {
+    	if (! username.isEmpty()) {
+    		return true;
+    	}
+    	if (!username.trim().isEmpty()) {
+    		return true;
+    	}
+    	return false;
+    }
+    
     public Player createPlayer(Scanner ap){
     	System.out.println("Welcome to Debug: Trivia for Bug Lovers : ) ");
     	System.out.println();
