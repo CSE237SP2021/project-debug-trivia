@@ -57,16 +57,16 @@ class UnitTesting {
 	}
 	
 	//test correct answer
-	@Test
-	void testCorrectAnswer() {
-		assertTrue(testQuestion.checkAnswer("Answer"));
-	}
+	//@Test
+//	void testCorrectAnswer() {
+	//	assertTrue(testQuestion.checkAnswer("Answer"));
+	//}
 	
 	//test incorrect asnwer
-	@Test
-	void testIncorrectAnswer() {
-		assertFalse(testQuestion.checkAnswer("option one"));
-	}
+	//@Test
+	//void testIncorrectAnswer() {
+	//	assertFalse(testQuestion.checkAnswer("option one"));
+	//}
 
 	
 	//randomize test? 
