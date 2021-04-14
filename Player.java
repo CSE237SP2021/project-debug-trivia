@@ -38,7 +38,7 @@ public class Player{
     	System.out.println("Welcome to Debug: Trivia for Bug Lovers : ) ");
     	System.out.println();
     	System.out.println("Instructions:");
-		System.out.println("Type in the corresponding letter for the answer for each question");
+		System.out.println("Type in the corresponding letter for the answer to each question");
 		System.out.println();
 		System.out.println("Please input your username:");
 		String input = ap.nextLine();
