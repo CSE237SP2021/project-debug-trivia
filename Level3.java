@@ -57,12 +57,12 @@ public class Level3 implements Level{
 	}
 	
 	{
-		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
-		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
-		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
-		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
-		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
-		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
+		Question qOne = new Question( "Out of 5,000 species of dragonfly, how many species live in the U.S.?", "450", "3,500", "105", "2,032" );
+		Question qTwo = new Question( "The largest known modern dragonfly has a wingspan of:", "6.3 in", "2 ft", "1 ft 4.2 in", "11 in" );
+		Question qThree = new Question( "During the larval stage, dragonflies live where?", "In water", "Underground", "In a tree", "In their mother's pouch" );
+		Question qFour = new Question( "Dragonflies catch their prey in their...", "Feet", "Wings", "Nests", "Antennae" );
+		Question qFive = new Question( "How far does the globe skinner dragonfly migrate?", "11,000 miles", "100 miles", "3 miles", "They do not migrate." );
+		Question qSix = new Question( "What is a group of dragonflies called?", "A swarm", "A dragoon", "A castle", "A clan" );
 		levelThreeQuestions[0] = qOne;
 		levelThreeQuestions[1] = qTwo;
 		levelThreeQuestions[2] = qThree;

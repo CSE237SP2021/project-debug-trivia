@@ -32,14 +32,5 @@ public class Question {
 	public String getAnswer() {
 		return answer;
 	}
-	
-//	public boolean checkAnswer(String input) {
-//		if(input.equals(answer)) {
-//			return true;
-//		}
-//		else {
-//			return false;
-//		}
-//	}
 }
 

@@ -57,12 +57,12 @@ public class Level5 implements Level {
 	}
 	
 	{
-		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
-		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
-		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
-		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
-		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
-		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
+		Question qOne = new Question( "An ant can carry up to __ times its body weight.", "5,000", "200", "1,000", "30" );
+		Question qTwo = new Question( "An ant colony is also known as what?", "A formicary", "A Pogonomyrmex", "A compound", "An apothecary" );
+		Question qThree = new Question( "The Middle English origin of the name ant, 'ampte,' means what?", "The biter-off", "The emperor", "The firestorm", "The freckle" );
+		Question qFour = new Question( "Mating ants have which special ability/", "Flying", "Super-speed", "Color-changing", "Singing" );
+		Question qFive = new Question( "Which type of ant CANNOT be found in a colony?", "Mating females", "The Queen", "Female workers", "Males" );
+		Question qSix = new Question( "The Cornell Sun called which ant-themed movie 'Marxist Propaganda'?", "Antz", "Ant-Man", "The Ant Bully", "None of the above." );
 		levelFiveQuestions[0] = qOne;
 		levelFiveQuestions[1] = qTwo;
 		levelFiveQuestions[2] = qThree;

@@ -58,12 +58,12 @@ public class Level4 implements Level {
 	
 	{
 		//replace questions with worm ones
-		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
-		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
-		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
-		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
-		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
-		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
+		Question qOne = new Question( "How many eyes do worms have?", "0", "2", "1", "3" );
+		Question qTwo = new Question( "About how much exposure to light does it take to paralyze a worm?", "One hour", "Thirty minutes", "Four hours", "Five minutes" );
+		Question qThree = new Question( "How fast can a medium earthworm move through the earth?", "185ft/hr", "20ft/hr", "3ft/hr", "100ft/hr" );
+		Question qFour = new Question( "A worm's tail will grow back if cut off. This is called:", "Regeneration", "Starfishing", "Regrowth", "Shifting" );
+		Question qFive = new Question( "How many hearts does a worm have?", "5", "6", "1", "3" );
+		Question qSix = new Question( "Which of the team members had to dissect a worm in high school biology class?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
 		levelFourQuestions[0] = qOne;
 		levelFourQuestions[1] = qTwo;
 		levelFourQuestions[2] = qThree;
