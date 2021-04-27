@@ -49,6 +49,10 @@ public class Level5 implements Level {
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 5: Ants");
+		System.out.println("/\\/\\\n"
+				+ "  \\_\\  _..._\n"
+				+ "  (\" )(_..._)\n"
+				+ "   ^^  // \\\\");
 		System.out.println();
 		for(int i = 0; i < levelFiveQuestions.length; i++) {
 			Question currentQ = levelFiveQuestions[i];

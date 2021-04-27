@@ -48,6 +48,16 @@ public class Level4 implements Level {
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 4: Worms");
+		System.out.println("                           (o)(o)\n"
+				+ "                          /     \\\n"
+				+ "                         /       |\n"
+				+ "                        /   \\  * |\n"
+				+ "          ________     /    /\\__/\n"
+				+ "  _      /        \\   /    /\n"
+				+ " / \\    /  ____    \\_/    /\n"
+				+ "//\\ \\  /  /    \\         /\n"
+				+ "V  \\ \\/  /      \\       /\n"
+				+ "    \\___/        \\_____/");
 		System.out.println();
 		for(int i = 0; i < levelFourQuestions.length; i++) {
 			Question currentQ = levelFourQuestions[i];

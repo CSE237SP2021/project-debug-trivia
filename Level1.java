@@ -51,6 +51,11 @@ public class Level1 implements Level {
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 1: Bees");
+		System.out.println("                      __\n"
+				+ "                     // \\\n"
+				+ "                     \\\\_/ //\n"
+				+ "   ''-.._.-''-.._.. -(||)(')\n"
+				+ "                     '''");
 		System.out.println();
 		for(int i = 0; i < levelOneQuestions.length; i++) {
 			Question currentQ = levelOneQuestions[i];

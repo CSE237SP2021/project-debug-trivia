@@ -49,6 +49,26 @@ public class Level3 implements Level{
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 3: Dragonflies");
+		System.out.println("                    .-.\n"
+				+ "                         ()I()\n"
+				+ "                    \"==.__:-:__.==\"\n"
+				+ "                   \"==.__/~|~\\__.==\"\n"
+				+ "                   \"==._(  Y  )_.==\"\n"
+				+ "        .-'~~\"\"~=--...,__\\/|\\/__,...--=~\"\"~~'-.\n"
+				+ "       (               ..=\\=/=..               )\n"
+				+ "        `'-.        ,.-\"`;/=\\ ;\"-.,_        .-'`\n"
+				+ "            `~\"-=-~` .-~` |=| `~-. `~-=-\"~`\n"
+				+ "                 .-~`    /|=|\\    `~-.\n"
+				+ "              .~`       / |=| \\       `~.\n"
+				+ "          .-~`        .'  |=|  `.        `~-.\n"
+				+ "        (`     _,.-=\"`    |=|    `\"=-.,_     `)\n"
+				+ "         `~\"~\"`           |=|           `\"~\"~`\n"
+				+ "                          |=|\n"
+				+ "                          |=|\n"
+				+ "                          |=|\n"
+				+ "                          /=\\\n"
+				+ "                          \\=/\n"
+				+ "                           ^");
 		System.out.println();
 		for(int i = 0; i < levelThreeQuestions.length; i++) {
 			Question currentQ = levelThreeQuestions[i];

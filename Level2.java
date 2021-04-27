@@ -50,6 +50,17 @@ public class Level2 implements Level{
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 2: Caterpillars");
+		System.out.println("o    o\n"
+				+ " \\__/\n"
+				+ " /oo\\\n"
+				+ " \\()/\n"
+				+ " |~~|\n"
+				+ " |~~|\n"
+				+ " |~~|               /\\\n"
+				+ " \\~~\\              /\\/\n"
+				+ "  \\~~\\____________/\\/\n"
+				+ "   \\/ | | | | | | \\/\n"
+				+ "    ~~~~~~~~~~~~~~~");
 		System.out.println();
 		for(int i = 0; i < levelTwoQuestions.length; i++) {
 			Question currentQ = levelTwoQuestions[i];
