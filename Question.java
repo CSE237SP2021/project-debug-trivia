@@ -1,4 +1,9 @@
-//an individual question for the trivia game
+/*
+ * This is the Question class. It defines the properties of an individual question. It defines a method that creates a question, using 
+ * the question, answer, and three other incorrect answers. 
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
 public class Question {
 	String prompt;
 	String answer;
@@ -14,6 +19,11 @@ public class Question {
 		this.choiceThree = choiceThree;
 	}
 	
+	/*
+	 * this function checks whether a user's answer is any of the options. 
+	 * @param input, the users response 
+	 * @return boolean, true if it is a valid input, false otherwise.
+	 * */
 	public boolean checkValidInput(String input) {
 		if (input.isEmpty() || input.trim().isEmpty()) {
 			return false;
@@ -21,9 +31,9 @@ public class Question {
 		if (input !=choiceOne && input != choiceTwo && input != choiceThree && input != answer) {
 			return false;
 		}
-		
 			return true;	
 	}
+	
 	
 	public String getPrompt() {
 		return prompt;

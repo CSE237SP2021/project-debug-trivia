@@ -1,3 +1,10 @@
+/*
+ * this is the Level2 class, it implements the level interface and creates an object for Level2. It defines the questions and 
+ * correct answers for the level along with the level score (increased if  Level2.correctAnswer == userInput in main game play).
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ * 
+ * */
 import java.util.Scanner;
 
 public class Level2 implements Level{
@@ -6,8 +13,10 @@ public class Level2 implements Level{
 	Question[] levelTwoQuestions = new Question[6];	
 	String answerLetter;
 	
-	//create a randomizer function to print out the choices and answer randomly
-	
+	/* This method randomizes the order in which the answers to the questions are printed. 
+	 * @param q a question being asked 
+	 * @return String random order of answers. 
+	 * */	
 	public String randomize(Question q){
 		double randomNumber = Math.floor(Math.random() * 4) + 1;
 		String result = "";
@@ -30,6 +39,14 @@ public class Level2 implements Level{
 		return result;
 	}
 	
+	
+	/*
+	 * This function plays the current level. 
+	 * @param p the current player
+	 * @param ap the scanner, how the player will be answering questions. 
+	 * @return boolean, true once the level has been played all the way through. 
+	 * 
+	 * */
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 2: Caterpillars");
@@ -57,6 +74,7 @@ public class Level2 implements Level{
 	}
 	
 	{
+		//Here, the questions for level two are defined, along with their correct answers, and answer options.
 		Question qOne = new Question( "What do caterpillars produce?", "Silk", "Aloe", "Sap", "Honey" );
 		Question qTwo = new Question( "How many true legs does a caterpilllar have?", "6", "12", "4", "22" );
 		Question qThree = new Question( "Up to how many muscles can a caterpillar have?", "4,000", "2,225", "62", "500" );

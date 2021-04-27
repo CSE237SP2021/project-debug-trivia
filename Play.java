@@ -1,14 +1,13 @@
+/*
+ * this is the Play class. This is the class that is called from the terminal. It defines a username and calls the Player class to create a 
+ * Player object. It also creates all the level objects, and implements a loop so that the user can play through all of the levels. 
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
 import java.util.Scanner;  // Import the Scanner class
 
 public class Play {
 	
-	
-	// This is the PLAY class, you call this from the terminal and it takes in a username etc. 
-	// This class will call the Player class to create a player object. 
-	// This class will also call the level classes (which use the level interface)
-			//There will be a class for each level. 
-	// this will take user answers and compare them to the correct answer for that level. 
-
 	public static void main(String[] args) {		
 		//create the scanner for all the levels
 		Scanner ap = new Scanner(System.in);
