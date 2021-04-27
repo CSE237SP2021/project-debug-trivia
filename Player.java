@@ -25,13 +25,13 @@ public class Player{
     }
     
     public boolean checkUsername(String username) {
-    	if (! username.isEmpty()) {
+    	if (!username.isEmpty() && username.trim().length()>0) {
     		return true;
     	}
-    	if (!username.trim().isEmpty()) {
-    		return true;
+    	else {
+        	return false;
+
     	}
-    	return false;
     }
     
     public Player createPlayer(Scanner ap){
@@ -42,6 +42,10 @@ public class Player{
 		System.out.println();
 		System.out.println("Please input your username:");
 		String input = ap.nextLine();
+		while (!checkUsername(input)) {
+			System.out.println("Sorry:( not a valid username");
+			input = ap.nextLine();
+		}
 		System.out.println();
 		System.out.println("Hello, " + input);
 		System.out.println();
