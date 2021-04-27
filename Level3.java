@@ -57,6 +57,10 @@ public class Level3 implements Level{
 			System.out.println();
 			System.out.println(randomize(currentQ));
 			String answer = ap.nextLine();
+			while (!levelThreeQuestions[i].checkValidInput(answer)) {
+				System.out.println("That answer is not one of the options");
+				answer = ap.nextLine();
+			}
 			System.out.println();
 			if(answer.equals(answerLetter)) {
 				p.addPoints(levelScore);

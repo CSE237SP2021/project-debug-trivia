@@ -4,6 +4,9 @@
  * 
  * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
  */
+import java.util.regex.*;
+
+
 public class Question {
 	String prompt;
 	String answer;
@@ -25,13 +28,21 @@ public class Question {
 	 * @return boolean, true if it is a valid input, false otherwise.
 	 * */
 	public boolean checkValidInput(String input) {
-		if (input.isEmpty() || input.trim().isEmpty()) {
+		Pattern pattern = Pattern.compile("[a-dA-D]");
+        Matcher m = pattern.matcher(input);
+
+		
+		if (input.isEmpty() || input.trim().length()==0) {
 			return false;
 		}
-		if (input !=choiceOne && input != choiceTwo && input != choiceThree && input != answer) {
+		else if (!m.matches()) {
+			System.out.print(input + " ");
+			System.out.println("not an ans");
 			return false;
 		}
-			return true;	
+		else {
+			return true;
+			}		
 	}
 	
 	

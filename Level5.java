@@ -57,6 +57,10 @@ public class Level5 implements Level {
 			System.out.println();
 			System.out.println(randomize(currentQ));
 			String answer = ap.nextLine();
+			while (!levelFiveQuestions[i].checkValidInput(answer)) {
+				System.out.println("That answer is not one of the options");
+				answer = ap.nextLine();
+			}
 			System.out.println();
 			if(answer.equals(answerLetter)) {
 				p.addPoints(levelScore);
