@@ -1,4 +1,8 @@
-
+/*
+ * This is the unit testing file.  it contains unit tests for the entire project.
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
 
 import static org.junit.jupiter.api.Assertions.*;
 

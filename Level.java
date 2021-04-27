@@ -1,5 +1,11 @@
+/*
+ * This file contains the level interface. Each level class will implement this interface. 
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ * 
+ * */
 
-// this is the level interface, each level implements it within their class
+
 import java.util.Scanner;
 
 public interface Level {

@@ -1,3 +1,9 @@
+/*
+ * This is the player class. It defines the properties of a player, such as username and score and defines the methods to set up 
+ * that player object. 
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
 import java.util.Scanner;
 
 //package Player;
@@ -24,6 +30,11 @@ public class Player{
     	this.points = levelPoints + this.points;
     }
     
+    /*
+     * This function checks that the input username is valid. 
+     * @param username, the input username
+     * @return true if it is valid, false otherwise.
+     * */
     public boolean checkUsername(String username) {
     	if (! username.isEmpty()) {
     		return true;
@@ -34,6 +45,11 @@ public class Player{
     	return false;
     }
     
+    /*
+     * This function creates a player by taking user input.
+     * @param ap, the scanner that allows a user to input a username
+     * @return a new player object.  
+     * */
     public Player createPlayer(Scanner ap){
     	System.out.println("Welcome to Debug: Trivia for Bug Lovers : ) ");
     	System.out.println();
