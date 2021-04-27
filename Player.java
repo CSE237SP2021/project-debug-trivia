@@ -36,13 +36,12 @@ public class Player{
      * @return true if it is valid, false otherwise.
      * */
     public boolean checkUsername(String username) {
-    	if (! username.isEmpty()) {
+    	if (! username.isEmpty()&& username.trim().length()>0) {
     		return true;
     	}
-    	if (!username.trim().isEmpty()) {
-    		return true;
-    	}
+    	else {
     	return false;
+    	}
     }
     
     /*
@@ -59,6 +58,10 @@ public class Player{
 		System.out.println("Please input your username:");
 		String input = ap.nextLine();
 		System.out.println();
+		while (!checkUsername(input)) {
+			System.out.println("Sorry:( not a valid username");
+			input = ap.nextLine();
+		}
 		System.out.println("Hello, " + input);
 		System.out.println();
 		Player singlePlayer = new Player(input, 0);
