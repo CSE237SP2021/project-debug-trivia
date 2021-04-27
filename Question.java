@@ -29,13 +29,13 @@ public class Question {
 	 * */
 	public boolean checkValidInput(String input) {
 		Pattern pattern = Pattern.compile("[a-dA-D]");
-        Matcher m = pattern.matcher(input);
+        Matcher patternMatch = pattern.matcher(input);
 
 		
 		if (input.isEmpty() || input.trim().length()==0) {
 			return false;
 		}
-		else if (!m.matches()) {
+		else if (!patternMatch.matches()) {
 			System.out.print(input + " ");
 			System.out.println("not an ans");
 			return false;

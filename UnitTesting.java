@@ -12,124 +12,143 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class UnitTesting {
-	
+
 	private Player testPlayer;
 	private Question testQuestion;
 	private Scanner testScanner;
-	
+
 	@BeforeEach
 	void setUpTestingVariables() {
 		testPlayer = new Player("testusername", 0);
 		testQuestion = new Question("Question", "Answer", "option one", "option 2", "option 3");
 		testScanner = new Scanner(System.in);
-
-
 	}
 
-	//adding a new username
+	//checking for valid and invalid new user names
 	@Test
 	void testNewUser() {
-		//setup 
-		//run behavior
-		//check result
-		assertTrue(testPlayer.checkUsername("username"));
-		
-	}
-	
-	// create player 
-	@Test
-	void createPlayer() {
-		testPlayer.createPlayer(testScanner);
-		assertTrue(true);
+		//check if "Username" is a valid user name.
+		boolean isValidUsername = testPlayer.checkUsername("username");
+		assertTrue(isValidUsername);
 	}
 
-	//adding a blank username
 	@Test
 	void testBadNewUser() {
-		assertFalse(testPlayer.checkUsername(""));
+		boolean isValidUsername = testPlayer.checkUsername("");
+		assertFalse(isValidUsername);
 	}
 
 	@Test
-	void testInput() {
-		assertFalse(testQuestion.checkValidInput("testanswer"));
-		
+	void testAnotherBadNewUser() {
+		boolean isValidUsername = testPlayer.checkUsername("    ");
+		assertFalse(isValidUsername);
 	}
-	//testing bad input 
+
+	
+	// create player test
+	@Test
+	void createPlayer() {
+		String username = "test-username";
+		int points =0;
+		Player newPlayer = new Player(username, points);
+		
+		assertTrue(username == newPlayer.username && points == newPlayer.points);
+	}
+
+
+	//test valid and invalid input
+	@Test
+	void testGoodInput() {
+		boolean isValidInput = testQuestion.checkValidInput("A");
+		assertTrue(isValidInput);
+	}
+	
 	@Test
 	void testBadInput() {
-		assertFalse(testQuestion.checkValidInput("blah blah"));
+		boolean isValidInput = testQuestion.checkValidInput("Here's my answer");
+		assertFalse(isValidInput);		
 	}
 	
-	//test correct answer
+	@Test
+	void testAnotherBadInput() {
+		boolean isValidInput = testQuestion.checkValidInput("  ");
+		assertFalse(isValidInput);		
+	}
 
-	//@Test
-//	void testCorrectAnswer() {
-	//	assertTrue(testQuestion.checkAnswer("Answer"));
-	//}
+	//create question test
+	@Test 
+	void testCreateQuestion() {
+		String question = "Question";
+		String one = "option1";
+		String two = "option2";
+		String three = "option3";
+		String ans = "answer";
+		
+		Question testQuestion = new Question(question, ans, one, two, three);
+		
+		boolean checkAns = (ans == testQuestion.answer);
+		boolean checkQuestion = (question == testQuestion.prompt);
+		
+		assertTrue(checkAns && checkQuestion);
+	}
 
-	//test incorrect asnwer
-	//@Test
-	//void testIncorrectAnswer() {
-	//	assertFalse(testQuestion.checkAnswer("option one"));
-	//}
-
-	
-	//randomize test? 
+	//randomize test -- THIS ONE NEEDS FIXIN
 	@Test 
 	void randomizeTest() {
 		Level1 one = new Level1();
 		one.randomize(testQuestion);
 		assertTrue(true);
 	}
-	
+
 	//add points test
 	@Test 
 	void addPoints() {
-		testPlayer.addPoints(5);
-		assertTrue(true);
+		int initialPoints = testPlayer.getPoints();
+		int addNum = 5;
+		testPlayer.addPoints(addNum);
+		initialPoints += addNum;
+		assertEquals(testPlayer.getPoints(), initialPoints);
 	}
-	
-	
-	
-	@Test
-	void testNewLevel() {
-		Level1 one = new Level1();
-		one.playLevel(testPlayer, testScanner);
-		assertTrue(true);
-		
-	}
-	
-	@Test
-	void testLevel2() {
-		Level2 level = new Level2();
-		level.playLevel(testPlayer, testScanner);
-		assertTrue(true);
-		
-	}
-	
-	@Test
-	void testLevel3() {
-		Level3 level = new Level3();
-		level.playLevel(testPlayer, testScanner);
-		assertTrue(true);
-		
-	}
-	
-	@Test
-	void testLevel4() {
-		Level4 level = new Level4();
-		level.playLevel(testPlayer, testScanner);
-		assertTrue(true);
-		
-	}
-	@Test
-	void testLevel5() {
-		Level5 level = new Level5();
-		level.playLevel(testPlayer, testScanner);
-		assertTrue(true);
-	}
+
+
+//	@Test
+//	void testNewLevel() {
+//		Level1 one = new Level1();
+//		one.playLevel(testPlayer, testScanner);
+//		assertTrue(true);
+//
+//	}
+//
+//	@Test
+//	void testLevel2() {
+//		Level2 level = new Level2();
+//		level.playLevel(testPlayer, testScanner);
+//		assertTrue(true);
+//
+//	}
+//
+//	@Test
+//	void testLevel3() {
+//		Level3 level = new Level3();
+//		level.playLevel(testPlayer, testScanner);
+//		assertTrue(true);
+//
+//	}
+//
+//	@Test
+//	void testLevel4() {
+//		Level4 level = new Level4();
+//		level.playLevel(testPlayer, testScanner);
+//		assertTrue(true);
+//
+//	}
+//
+//	@Test
+//	void testLevel5() {
+//		Level5 level = new Level5();
+//		level.playLevel(testPlayer, testScanner);
+//		assertTrue(true);
+//	}
 
 }
-
-
 
