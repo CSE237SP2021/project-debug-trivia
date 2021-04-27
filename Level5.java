@@ -1,3 +1,9 @@
+/*
+ * this is the Level5 class, it implements the level interface and creates an object for Level2. It defines the questions and 
+ * correct answers for the level along with the level score (increased if  Level2.correctAnswer == userInput in main game play).
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
 import java.util.Scanner;
 
 public class Level5 implements Level {
@@ -6,8 +12,10 @@ public class Level5 implements Level {
 	Question[] levelFiveQuestions = new Question[6];
 	String answerLetter;
 	
-	//create a randomizer function to print out the choices and answer randomly
-	
+	/* This method randomizes the order in which the answers to the questions are printed. 
+	 * @param q a question being asked 
+	 * @return String random order of answers. 
+	 * */	
 	public String randomize(Question q){
 		double randomNumber = Math.floor(Math.random() * 4) + 1;
 		String result = "";
@@ -30,6 +38,14 @@ public class Level5 implements Level {
 		return result;
 	}
 	
+	
+	/*
+	 * This function plays the current level. 
+	 * @param p the current player
+	 * @param ap the scanner, how the player will be answering questions. 
+	 * @return boolean, true once the level has been played all the way through. 
+	 * 
+	 * */
 	public boolean playLevel(Player p, Scanner ap){
 		//don't close the Scanner because the game ends
 		System.out.println("Welcome to Level 5: Ants");
@@ -41,6 +57,10 @@ public class Level5 implements Level {
 			System.out.println();
 			System.out.println(randomize(currentQ));
 			String answer = ap.nextLine();
+			while (!levelFiveQuestions[i].checkValidInput(answer)) {
+				System.out.println("That answer is not one of the options");
+				answer = ap.nextLine();
+			}
 			System.out.println();
 			if(answer.equals(answerLetter)) {
 				p.addPoints(levelScore);
@@ -57,12 +77,13 @@ public class Level5 implements Level {
 	}
 	
 	{
-		Question qOne = new Question( "How many grams of honey does a bee make in her lifetime?", "5", "2", "10", "4" );
-		Question qTwo = new Question( "What is a bees favorite color of flower?", "Blue", "Red", "Green", "Yellow" );
-		Question qThree = new Question( "How fast can a bee fly?", "15 mph", "20 mph", "8 mph", "12 mph" );
-		Question qFour = new Question( "How many drones can the queen mate with in one day?", "17", "40", "8", "5" );
-		Question qFive = new Question( "How many stomachs does a bee have?", "2", "0", "1", "4" );
-		Question qSix = new Question( "Which of the team members stays steely in the face of these vivious creatures despite being insanely allergic?", "Sarah", "Mia", "Nina", "Sideshow Bob" );
+		//Here, the questions for level five are defined, along with their correct answers, and answer options.
+		Question qOne = new Question( "An ant can carry up to __ times its body weight.", "5,000", "200", "1,000", "30" );
+		Question qTwo = new Question( "An ant colony is also known as what?", "A formicary", "A Pogonomyrmex", "A compound", "An apothecary" );
+		Question qThree = new Question( "The Middle English origin of the name ant, 'ampte,' means what?", "The biter-off", "The emperor", "The firestorm", "The freckle" );
+		Question qFour = new Question( "Mating ants have which special ability/", "Flying", "Super-speed", "Color-changing", "Singing" );
+		Question qFive = new Question( "Which type of ant CANNOT be found in a colony?", "Mating females", "The Queen", "Female workers", "Males" );
+		Question qSix = new Question( "The Cornell Sun called which ant-themed movie 'Marxist Propaganda'?", "Antz", "Ant-Man", "The Ant Bully", "None of the above." );
 		levelFiveQuestions[0] = qOne;
 		levelFiveQuestions[1] = qTwo;
 		levelFiveQuestions[2] = qThree;

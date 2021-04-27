@@ -1,4 +1,12 @@
-//an individual question for the trivia game
+/*
+ * This is the Question class. It defines the properties of an individual question. It defines a method that creates a question, using 
+ * the question, answer, and three other incorrect answers. 
+ * 
+ * Authors:  Mia Collymore Abbas, Nina Redpath, Sarah Willis
+ */
+import java.util.regex.*;
+
+
 public class Question {
 	String prompt;
 	String answer;
@@ -14,16 +22,29 @@ public class Question {
 		this.choiceThree = choiceThree;
 	}
 	
+	/*
+	 * this function checks whether a user's answer is any of the options. 
+	 * @param input, the users response 
+	 * @return boolean, true if it is a valid input, false otherwise.
+	 * */
 	public boolean checkValidInput(String input) {
-		if (input.isEmpty() || input.trim().isEmpty()) {
-			return false;
-		}
-		if (input !=choiceOne && input != choiceTwo && input != choiceThree && input != answer) {
-			return false;
-		}
+		Pattern pattern = Pattern.compile("[a-dA-D]");
+        Matcher m = pattern.matcher(input);
+
 		
-			return true;	
+		if (input.isEmpty() || input.trim().length()==0) {
+			return false;
+		}
+		else if (!m.matches()) {
+			System.out.print(input + " ");
+			System.out.println("not an ans");
+			return false;
+		}
+		else {
+			return true;
+			}		
 	}
+	
 	
 	public String getPrompt() {
 		return prompt;
@@ -32,14 +53,5 @@ public class Question {
 	public String getAnswer() {
 		return answer;
 	}
-	
-//	public boolean checkAnswer(String input) {
-//		if(input.equals(answer)) {
-//			return true;
-//		}
-//		else {
-//			return false;
-//		}
-//	}
 }
 
