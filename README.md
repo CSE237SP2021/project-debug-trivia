@@ -36,7 +36,7 @@ therefore, while our leaderclass prints out the current "winner" for a single pl
 	please download the repository and navigate to it in your terminal 
 	
 	run Javac Play.java
-	run java Play. 
+	run java Play.java 
 	have fun!! 
 	
 ** Note that the responses to the trivia questions should be the corresponding letter of the answer (upper or lower case)
