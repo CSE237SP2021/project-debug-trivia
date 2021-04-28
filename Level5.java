@@ -66,7 +66,7 @@ public class Level5 implements Level {
 				answer = ap.nextLine();
 			}
 			System.out.println();
-			if(answer.equals(answerLetter)) {
+			if(answer.equals(answerLetter)  || answer.equals(answerLetter.toLowerCase())) {
 				p.addPoints(levelScore);
 				System.out.println("correct!");
 			}
