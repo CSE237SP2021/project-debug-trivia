@@ -65,6 +65,7 @@ public class Player{
 		System.out.println("Hello, " + input);
 		System.out.println();
 		Player singlePlayer = new Player(input, 0);
+		
 		return singlePlayer;
     }
 }

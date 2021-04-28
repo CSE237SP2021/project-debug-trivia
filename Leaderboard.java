@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 
 public class Leaderboard {
@@ -8,20 +7,25 @@ public class Leaderboard {
 	
 	LinkedList<String> playerPoints = new LinkedList<String>();
 
-	public ArrayList<Integer> printLeaderboard(ArrayList<Player> players) {
+	public void printLeaderboard(ArrayList<Player> players) {
 		for (int i=0; i < players.size(); i++) {
 			Player examinePlayer = players.get(i);
 			points.add(examinePlayer.getPoints());
+			playerPoints.add(players.get(i).getUsername());
 		}
-		Collections.sort(points);
-		return points;
+		for (int i=0; i < points.size(); i++) {
+			if (points.get(i) > points.get(i+1)) {
+				int pointsAmount = points.get(i);
+				points.remove(i);
+				points.add(pointsAmount);
+				String playerName = playerPoints.get(i);
+				playerPoints.remove(playerPoints.get(i));
+				playerPoints.add(playerName);
+			}
+		}
+		for (int i=0; i < points.size(); i++) {
+			System.out.println(playerPoints.get(i) + ": " + points.get(i));
+		}
 	}
-	
-	// really confused about this
-	public boolean printLeaderboardDemo(ArrayList<Player> players) {
-		sortPlayerPoints(PlayerStorage.getPlayerList());
-		for (int i=0; i < playerPoints.size(); i++)
-		System.out.println()
-		
-	}
+
 }
