@@ -36,8 +36,6 @@ public class Question {
 			return false;
 		}
 		else if (!patternMatch.matches()) {
-			System.out.print(input + " ");
-			System.out.println("not an ans");
 			return false;
 		}
 		else {
