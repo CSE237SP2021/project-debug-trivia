@@ -7,7 +7,15 @@ import java.util.ArrayList;
 
 public class PlayerStorage {
 
-	ArrayList<Player> players = new ArrayList<Player>();
+	public ArrayList<Player> players = new ArrayList<Player>();
+	
+	public PlayerStorage(ArrayList<Player> players){
+        this.players = players;
+    }
+
+	public ArrayList<Player> getPlayerList(){
+		return players;
+	}
 
 	public boolean addPlayer(Player newPlayer) {
 		if (players.contains(newPlayer)) {
