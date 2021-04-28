@@ -4,7 +4,7 @@ Mia Collymore Abbas, Nina Redpath, and Sarah Willis
 
 This project is a multiple-choice trivia game centered around bugs that increases with difficulty with each new level and corresponding new bug!
 
-<h5>For the first iteration, we did the following: </h5>
+<h2>For the first iteration, we did the following: </h2>
 
 - set up our repo and kanban board <br />
 - mapped out the general structure of our code (in terms of classes, interfaces etc) <br />
@@ -12,7 +12,7 @@ This project is a multiple-choice trivia game centered around bugs that increase
 - created the basic play loop so that one level can be played ** note that the trivia is placeholder questions, not real trivia yet. <br />
 - created a score system that updates when a question is correct. <br />
 
-<h5> For the second iteration, we: </h5><br />
+<h2> For the second iteration, we: </h2><br />
 - added the rest of the levels <br />
 - inputed real trivia <br />
 - made the instructions more user-friendly. <br />
@@ -20,7 +20,7 @@ This project is a multiple-choice trivia game centered around bugs that increase
 - added unit testing <br />
   
   
-<h3>or the FINAL iteration, we did the following: </h3> <br />
+<h2>for the FINAL iteration, we did the following: </h2> <br />
 - made the unit tests more effective and more exhaustive <br />
 - added regex so that the user would be prompted again if their response was not valid (not in the form: A, B, C or D) <br />
 - added regex so that for the username and the question responses, an empty string would not be accepted <br />
@@ -32,7 +32,7 @@ For this iteration, the one thing that is not working entirely as planned is the
 Our initial thought was to make this a multiplayer game, but as other technical issues/"bugs" in the code came up, we did not have time to implement this. 
 therefore, while our leaderclass prints out the current "winner" for a single player, and is a start for code that could handle multiple players, we were not able to test that functionality. 
 	
-<h3>Usage: </h3>
+<h2>Usage: </h2>
 	please download the repository and navigate to it in your terminal 
 	
 	run Javac Play.java
