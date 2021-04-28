@@ -27,7 +27,7 @@ This project is a multiple-choice trivia game centered around bugs that increase
 - added the capability of recognizing upper and lower case correct responses.  <br />
 - added ASCII code images for each level <br />
 - added a leaderboard class to store local scores and implemented this to print after the levels. <br />
-
+ <br /> <br />
 For this iteration, the one thing that is not working entirely as planned is the leaderboard class. 
 Our initial thought was to make this a multiplayer game, but as other technical issues/"bugs" in the code came up, we did not have time to implement this. 
 therefore, while our leaderclass prints out the current "winner" for a single player, and is a start for code that could handle multiple players, we were not able to test that functionality. 
